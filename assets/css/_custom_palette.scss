@@ -1,0 +1,107 @@
+/// Solid State Enterprise Palette Override
+/// Designed for wesellpc.ca - Refurbished Hardware Specialists
+
+// 1. Color Scheme Variables
+// Swapping default purple/pink accents for clean, high-trust tech blues and greens
+$color-bg: #0d131a;                    // Deep navy/charcoal midnight background
+$color-bg-alt: #131c26;                // Slightly lighter midnight for inner modules
+$color-accent: #00cca3;                // Tech Mint/Green (Eco-friendly, refurbished vibe)
+$color-accent-blue: #0070f3;           // Trust Blue for primary anchors and actions
+$color-text: #e2e8f0;                  // High-contrast soft white text
+$color-text-muted: #94a3b8;            // Muted slate gray for secondary captions
+$color-border: rgba(255, 255, 255, 0.1);
+
+// 2. Custom CSS Block for _wrapper.scss / main.scss Overrides
+/* Apply this configuration block to update the Solid State color scheme */
+
+#header {
+    background-color: $color-bg;
+    border-bottom: solid 2px $color-accent;
+    
+    h1 a {
+        color: #ffffff;
+        font-weight: 800;
+        letter-spacing: 0.05em;
+        span {
+            color: $color-accent;
+        }
+    }
+}
+
+#banner {
+    background-image: linear-gradient(45deg, rgba($color-bg, 0.85), rgba($color-accent-blue, 0.45)), url("../../images/banner.jpg");
+    background-blend-mode: multiply;
+    border-bottom: solid 4px $color-accent;
+
+    h2 {
+        color: #ffffff;
+        strong {
+            color: $color-accent;
+        }
+    }
+}
+
+.wrapper.style1 {
+    background-color: $color-bg;
+    .spotlight {
+        border-bottom: solid 1px $color-border;
+    }
+}
+
+.wrapper.style2 {
+    background-color: $color-bg-alt;
+}
+
+.wrapper.style3 {
+    background-color: $color-bg;
+    background-image: linear-gradient(rgba($color-bg, 0.9), rgba($color-bg, 0.9)), url("../../images/bg.jpg");
+}
+
+/* Button & Accent Overrides */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+.button {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px $color-accent-blue;
+    color: #ffffff !important;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+
+    &:hover, &:active {
+        background-color: $color-accent-blue;
+        box-shadow: inset 0 0 0 2px $color-accent-blue;
+    }
+
+    &.primary {
+        background-color: $color-accent;
+        box-shadow: none;
+        color: $color-bg !important;
+        font-weight: 700;
+
+        &:hover, &:active {
+            background-color: lighten($color-accent, 10%);
+            color: $color-bg !important;
+        }
+    }
+}
+
+/* Feature & Product Cards */
+.features {
+    article {
+        background-color: $color-bg;
+        border: solid 1px $color-border;
+        
+        &:nth-child(2n) {
+            background-color: lighten($color-bg, 2%);
+        }
+
+        .image {
+            border-bottom: solid 3px $color-accent-blue;
+        }
+    }
+}
+
+#footer {
+    background-color: darken($color-bg, 3%);
+    border-top: solid 4px $color-accent-blue;
+}
