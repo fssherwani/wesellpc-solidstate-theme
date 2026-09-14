@@ -30,4 +30,5 @@ Credits:
 		Scrollex (github.com/ajlkn/jquery.scrollex)
 		Responsive Tools (github.com/ajlkn/responsive-tools)
 		
-FS Sep 14		
+FS Sep 14
+working on the development branch		
