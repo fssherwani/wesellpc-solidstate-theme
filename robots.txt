@@ -1,0 +1,11 @@
+# www.robotstxt.org/
+
+# Allow all search engines to crawl the entire site
+User-agent: *
+Allow: /
+
+# Prevent crawling of specific temporary or administrative assets if any
+Disallow: /assets/js/vendor/
+
+# Link to your XML Sitemap
+Sitemap: https://wesellpc.ca 
