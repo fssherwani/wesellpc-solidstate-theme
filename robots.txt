@@ -8,4 +8,4 @@ Allow: /
 Disallow: /assets/js/vendor/
 
 # Link to your XML Sitemap
-Sitemap: https://wesellpc.ca 
+Sitemap: https://wesellpc.ca/sitemap.xml 
